@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Matrix background canvas -->
+  <canvas id="matrixCanvas"></canvas>
+
+  <!-- Main wrapper -->
+  <div class="containerWrapper">
+    <p class="credit">Made By JakeTech.business@gmail.com</p>
+    <div class="container">
+      <h2>Password Strength Checker</h2>
+      <input type="password" id="passwordInput" placeholder="Enter a password" oninput="checkPassword()">
+      <div id="progressBarContainer">
+        <div id="progressBar"></div>
+      </div>
+      <p id="strengthText">Strength: </p>
+      <ul id="suggestions"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="matrix.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* Full-page Matrix background */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: black;
+}
+
+/* Matrix canvas fills entire screen */
+#matrixCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* behind everything */
+}
+
+/* Wrapper centers the container */
+.containerWrapper {
+  position: relative;
+  z-index: 1; /* above the canvas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Credit line */
+.credit {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+}
+
+/* Main container */
+.container {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  width: 350px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 2px solid #0f0;
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+}
+
+input:focus {
+  border-color: #00ff00;
+  box-shadow: 0 0 10px rgba(0,255,0,0.6);
+  outline: none;
+}
+
+#strengthText {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.weak { color: #e74c3c; }
+.medium { color: #f39c12; }
+.strong { color: #2ecc71; }
+
+ul {
+  text-align: left;
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #0f0;
+}
+
+li {
+  font-size: 14px;
+}
+
+/* Progress bar */
+#progressBarContainer {
+  width: 100%;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #e74c3c;
+  transition: width 0.3s, background 0.3s;
+}
